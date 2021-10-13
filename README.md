@@ -30,7 +30,7 @@ essa biblioteca auxiliar a rodar o serviço sem precisar fazer a conversão de t
 
 > package.json
  "scripts": {
-   "dev": "ts-node-dev src/server.ts"
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
  },
 
  Agora é possivel rodar o servido no terminal: yarn dev
