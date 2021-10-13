@@ -21,3 +21,17 @@ importar express
 yarn add @types/express -D
 
 yarn add typescript -D
+
+## COnfigurando ts-node-dev
+
+yarn add ts-node-dev -D
+
+essa biblioteca auxiliar a rodar o serviço sem precisar fazer a conversão de ts para js, pois ela faz automáticamente.
+
+> package.json
+ "scripts": {
+   "dev": "ts-node-dev src/server.ts"
+ },
+
+ Agora é possivel rodar o servido no terminal: yarn dev
+

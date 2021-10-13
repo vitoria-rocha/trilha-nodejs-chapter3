@@ -1,8 +1,9 @@
 import express from 'express';
-import { createCourse } from './routes';
 
 const app = express();
 
-app.get("/", createCourse);
+app.get("/", (request, response) => {
+  return response.json({message: "oi"});
+});
 
 app.listen(8080, () => console.log("server is running: http://localhost:8080"));
