@@ -4,8 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
+var routes_1 = require("./routes");
 var app = (0, express_1.default)();
-app.get("/", function (request, response) {
-    return response.json({ message: "HELLO" });
-});
-app.listen(8080);
+app.get("/", routes_1.createCourse);
+app.listen(8080, function () { return console.log("server is running: http://localhost:8080"); });
