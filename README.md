@@ -35,3 +35,17 @@ essa biblioteca auxiliar a rodar o serviço sem precisar fazer a conversão de t
 
  Agora é possivel rodar o servido no terminal: yarn dev
 
+
+## SOLID
+
+Padrões de vão te ajudar a escrever um código mais organizado e limpo.
+
+S => Single Responsability Principle - Principio da responsabilidade unica
+
+O => Open-closed Principe - principio aberto/fechado
+
+L => Liskov Substituion Principle - principio da substituição de Liskov
+
+I => Interface Segregation Principle - princiopio da segregação de interface
+
+D => Dependency Inversion Principle - principio da inversão de dependencias
