@@ -49,3 +49,7 @@ L => Liskov Substituion Principle - principio da substituição de Liskov
 I => Interface Segregation Principle - princiopio da segregação de interface
 
 D => Dependency Inversion Principle - principio da inversão de dependencias
+
+
+## Biblioteca Multer
+biblioteca do node.js, com ela será possível fazer o upload de arquivos para a nossa aplicação realizar a leitura e dados.
