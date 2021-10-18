@@ -1,5 +1,5 @@
-import { Category } from "../Category";
-import { ICreateCategoryDTO, ICategoriesRepository } from "./ICategoriesRepository";
+import { Category } from "../../Category";
+import { ICreateCategoryDTO, ICategoriesRepository } from "../ICategoriesRepository";
 
 class CategoriesRepository implements ICategoriesRepository{
   private categories: Category[];
