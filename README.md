@@ -5,7 +5,7 @@ Linguaguem open source da microsoft.
 
 É o javascript com algumas coisas a mais, composto por js.
 
-- Tipagem estática: não conseguimos alterar o tipo da variável depois que ela é criada
+-  Tipagem estática: não conseguimos alterar o tipo da variável depois que ela é criada
 
 ## Iniciando o projeto
 
@@ -53,3 +53,7 @@ D => Dependency Inversion Principle - principio da inversão de dependencias
 
 ## Biblioteca Multer
 biblioteca do node.js, com ela será possível fazer o upload de arquivos para a nossa aplicação realizar a leitura e dados.
+
+> yarn add multer 
+
+> yarn add @types/multer -D 
