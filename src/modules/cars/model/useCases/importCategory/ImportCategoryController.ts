@@ -1,3 +1,5 @@
+import { Request, Response } from "express";
+
 import { ImportCategoryUseCase } from "./ImportCategoryUseCase";
 
 class ImportCategoryController{
@@ -6,7 +8,7 @@ class ImportCategoryController{
     const { file } = request;
     
     this.importCategoryUseCase.execute(file);
-    
+
     return response.send();
   }
 }

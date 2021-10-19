@@ -57,3 +57,10 @@ biblioteca do node.js, com ela será possível fazer o upload de arquivos para a
 > yarn add multer 
 
 > yarn add @types/multer -D 
+
+## Conceito de stream
+Ser possível fazer a leitura aos poucos, ajuda o servidor, não sobrecarrega. Muito utilizado para aplicações grandes.
+
+>import fs from "fs"
+>
+>const stream = fs.createReadStream(file.path);
