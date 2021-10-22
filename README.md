@@ -103,7 +103,7 @@ Acessar o cantainer
 >docker exec -it nomedocontainer /bin/bash
 
 Ver containers
->docker ps
+>docker ps -a
 
 Parar container
 >docker stop id_container
@@ -118,3 +118,12 @@ O Docker Compose Ã© uma ferramenta que lhe permite executar ambientes de aplicaÃ
 >sudo chmod +x /usr/local/bin/docker-compose
 
 >docker-compose --version
+
+
+## Configurando Banco de dados
+
+### Postgress
+
+> yarn add typeorm reflect-metadata
+
+> yarn add pg
