@@ -58,9 +58,31 @@ biblioteca do node.js, com ela será possível fazer o upload de arquivos para a
 
 > yarn add @types/multer -D 
 
+## SWAGGER
+>yarn add swagger-ui-express
+
+>yarn add @types/swagger-ui-express
+
+## CSV PARSE
+
+>yarn add csv-parse
+
+>yarn add @types/csv-parse
+
 ## Conceito de stream
 Ser possível fazer a leitura aos poucos, ajuda o servidor, não sobrecarrega. Muito utilizado para aplicações grandes.
 
 >import fs from "fs"
 >
 >const stream = fs.createReadStream(file.path);
+
+## Docker
+
+Ferramenta para a criação de containers.
+
+O docker resolve o problema: na minha máquina funciona. COnseguimos rodar e compartilhar os recursos.
+
+Antes do docker era necessário instalar os recursos (postgress, mongo etc) e isso causava problemas pq as vezes na sua maquina tá instalada uma versão e na máquina de outro colega de trabaho está instalada outra versão. 
+PAra instalar era necessário configurar uma VM para cada recurso, isso acabava deixando a muina lenta pois eram muitos arquivos.
+
+Co o docker não é necessário intalar nada disso, basta rodar um container com a imagem necessário (ex: postgress).
