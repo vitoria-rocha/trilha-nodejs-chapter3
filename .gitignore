@@ -2,3 +2,5 @@
 /dist
 package.json
 yarn.lock
+.git
+.vscode

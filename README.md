@@ -86,3 +86,15 @@ Antes do docker era necessário instalar os recursos (postgress, mongo etc) e is
 PAra instalar era necessário configurar uma VM para cada recurso, isso acabava deixando a muina lenta pois eram muitos arquivos.
 
 Co o docker não é necessário intalar nada disso, basta rodar um container com a imagem necessário (ex: postgress).
+
+> docker -v
+
+hub.docker.com/search
+
+ver quais imagens estao disponiveis ^
+
+Rodar as imagens
+>docker build -t rentalx .
+
+Rodar o container
+> docker run -p 8080:8080 rentx
