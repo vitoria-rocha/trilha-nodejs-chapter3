@@ -108,6 +108,10 @@ Ver containers
 Parar container
 >docker stop id_container
 
+>docker-compose up
+>docker-compose start
+>docker logs nome(rentx) -f
+
 ## Instalar DOCKER-COMPOSE
 
 O Docker Compose é uma ferramenta que lhe permite executar ambientes de aplicações com vários contêineres com base nas definições contidas em um arquivo YAML. Ele usa as definições de serviço para compilar ambientes totalmente personalizados com contêineres múltiplos que podem compartilhar redes e volumes de dados.
