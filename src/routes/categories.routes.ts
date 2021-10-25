@@ -5,7 +5,7 @@ import { createCategoryController } from "../modules/cars/entities/useCases/crea
 import { importCategoryController } from "../modules/cars/entities/useCases/importCategory";
 import { listCategoriesController } from "../modules/cars/entities/useCases/listCategories";
 
-const categoriesRoutes = Router();
+const categoriesRoutes = Router(); 
 
 const upload = multer({
   dest: "./tmp",
