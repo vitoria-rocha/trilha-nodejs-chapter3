@@ -131,3 +131,31 @@ O Docker Compose Ã© uma ferramenta que lhe permite executar ambientes de aplicaÃ
 > yarn add typeorm reflect-metadata
 
 > yarn add pg
+
+definir usuario e senha, abrir beekeper e fzer a conexao inserindo usuario senha e nome do db.
+
+### Migrations
+
+adicionar typeorm nos scripts (package.json)
+
+> "scripts": {
+   > "typeorm":"ts-node-dev ./node_modules/typeorm/cli"
+> } 
+
+definir o diretorio das migrations no arquivo ormconfig.json
+
+"cli":{
+   "migrationsDir":"./src/database/migrations"
+}
+
+
+Criando uma migration
+
+> yarn typeorm migration:create -n CreateCategories
+
+
+depois de criar a migration e criar as colunas e o objeto das colunas
+
+> yarn typeorm migration:run
+
+reload beekeper pra ver se deu certo
