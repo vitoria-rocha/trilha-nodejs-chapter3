@@ -159,3 +159,8 @@ depois de criar a migration e criar as colunas e o objeto das colunas
 > yarn typeorm migration:run
 
 reload beekeper pra ver se deu certo
+
+## TSYRINGE
+Ajuda a fazer as injeções de dependencia
+
+> yarn add tsyringe
