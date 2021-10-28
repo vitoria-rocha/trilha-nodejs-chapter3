@@ -171,3 +171,13 @@ reload beekeper pra ver se deu certo
 Ajuda a fazer as injeções de dependencia
 
 > yarn add tsyringe
+
+## BCrypt
+
+Biblioteca para criptografar senhas
+
+> yarn add bcrypt
+
+> yarn add @types/bcrypt -D
+
+importar a função HASH do bcrypt no UseCase
