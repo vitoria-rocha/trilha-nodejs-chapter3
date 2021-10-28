@@ -181,3 +181,18 @@ Biblioteca para criptografar senhas
 > yarn add @types/bcrypt -D
 
 importar a função HASH do bcrypt no UseCase
+
+Para conseguir fazer a autenticação de usuário precisamos de um token, sem a autenticação do usuario a todo momento o usuario tem que inserir seu email e senha para realizar uma requisição.
+
+> jwt.io 
+
+Ao fazer uma autenticação é gerado um token, e toda vez que o usuario for fazer uma requisição é feita uma verificação desse token, se estiver tudo correto é possível realizar a requisição.
+
+O token garante a segurança da aplicação.
+
+Um token é composto por 3 partes:
+- header: onde especificamos o tipo (jwt)
+
+- payload: aqui passamos as informações do usuario (email, nome, quando foi gerado), não pode passar dados criticos (senha)
+
+- verify signature: garante a segurança do token
