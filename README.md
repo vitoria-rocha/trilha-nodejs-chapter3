@@ -160,6 +160,13 @@ depois de criar a migration e criar as colunas e o objeto das colunas
 
 reload beekeper pra ver se deu certo
 
+ - Migration AlterUserDelete:
+   
+   Essa migration foi criada para remover a coluna username da tabela usuário.
+
+   Vamos remover pois não será necessário já que temos o e-mail do usuario e o e-mail já é um dado único.
+   
+
 ## TSYRINGE
 Ajuda a fazer as injeções de dependencia
 
