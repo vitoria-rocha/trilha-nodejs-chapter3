@@ -1,5 +1,5 @@
 import { Category } from "../../Category";
-import { ICategoriesRepository } from "../../repositories/ICategoriesRepository";
+import { ICategoriesRepository } from "../../../repositories/ICategoriesRepository";
 import{ inject, injectable} from "tsyringe";
 
 @injectable()

@@ -170,6 +170,12 @@ reload beekeper pra ver se deu certo
 ## TSYRINGE
 Ajuda a fazer as injeções de dependencia
 
+A injeção de dependencia serve para que uma classe não seja tão dependente dos metódos. 
+
+Quando uma injeção de depencia é feita de forma correto, geralmente não é necessário alterar muitos arquivos caso necessite fazer uma modificação pois as classes não sao dependentes entre si.
+
+A injeção de depencia facilita os testes e também na manutenção de código.
+
 > yarn add tsyringe
 
 ## BCrypt
@@ -182,11 +188,13 @@ Biblioteca para criptografar senhas
 
 importar a função HASH do bcrypt no UseCase
 
+## Autenticação de usuário com JWT
+
 Para conseguir fazer a autenticação de usuário precisamos de um token, sem a autenticação do usuario a todo momento o usuario tem que inserir seu email e senha para realizar uma requisição.
 
 > jwt.io 
 
-Ao fazer uma autenticação é gerado um token, e toda vez que o usuario for fazer uma requisição é feita uma verificação desse token, se estiver tudo correto é possível realizar a requisição.
+Ao fazer uma autenticação é gerado um token, es toda vez que o usuario for fazer uma requisição é feita uma verificação desse token, se estiver tudo correto é possível realizar a requisição.
 
 O token garante a segurança da aplicação.
 
@@ -196,3 +204,7 @@ Um token é composto por 3 partes:
 - payload: aqui passamos as informações do usuario (email, nome, quando foi gerado), não pode passar dados criticos (senha)
 
 - verify signature: garante a segurança do token
+
+
+> yarn add jsonwebtoken
+>yarn add @types/jsonwebtoken -D
