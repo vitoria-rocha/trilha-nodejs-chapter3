@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { verify } from "jsonwebtoken";
+import { AppError } from "../errors/AppError";
 import { UsersRepository } from "../modules/accounts/repositories/implementations/UsersRepository";
 /* QUando eu faço uma requisição o decode me retorna alguams informações no terminal
     console.log(decoded);
@@ -19,7 +20,7 @@ export async function ensureAuthenticated(request: Request, response: Response, 
   const authHeader = request.headers.authorization;
   
   if (!authHeader){
-    throw new Error("Token missing");
+    throw new AppError("Token missing", 401);
   }
 
   /* [0] Bearer
@@ -35,11 +36,11 @@ export async function ensureAuthenticated(request: Request, response: Response, 
     const user = await usersRepository.findById(user_id);
 
     if(!user){
-      throw new Error("user does not exists!");
+      throw new AppError("user does not exists!", 401);
     }
 
     next();
   } catch{
-    throw new Error("invalid token!");
+    throw new AppError("invalid token!", 401);
   }
 }
