@@ -208,3 +208,21 @@ Um token é composto por 3 partes:
 
 > yarn add jsonwebtoken
 >yarn add @types/jsonwebtoken -D
+
+## Imagens em banco de dados
+ - Por que não enviar imagens para DB?
+
+ A coluna de avatar salvará a referência do upload da imagem.
+ Se salvarmos uma imagem diretamnete no DB, devemos converter para um base64 mas não é uma prática boa pois o arquivo pode se corromper e o DB fica muito PESADO.
+
+ Então surgem os storages.
+
+ Permite com que salvemos os arquivos em um storage e pegando apenas a referência. 
+
+  - Criar pasta updateUserAvatar
+  - UpdatdeUserAvatarUseCase.ts
+
+Para que o usuário consiga alterar ou inserir um avatar ele precisa estar autenticado.
+
+
+
