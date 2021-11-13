@@ -1,59 +1,62 @@
-import { JsonWebTokenError } from "jsonwebtoken";
-import { inject, injectable } from "tsyringe";
-import { UsersRepository } from "../../repositories/implementations/UsersRepository";
-import { IUserRepository } from "../../repositories/IUserRepository";
-import { sign } from "jsonwebtoken";
 import { compare } from "bcrypt";
-import { AppError } from "../../../../errors/AppError";
+import { sign } from "jsonwebtoken";
+import { inject, injectable } from "tsyringe";
 
-interface IRequest{
+import { AppError } from "../../../../errors/AppError";
+import { IUsersRepository } from "../../repositories/IUsersRepository";
+
+interface IRequest {
   email: string;
   password: string;
 }
 
-interface IResponse{
+interface IResponse {
   user: {
-    name: string,
-    email: string,
-  },
-  token: string,
+    name: string;
+    email: string;
+  };
+  token: string;
 }
 
 @injectable()
-class AuthenticateUserUseCase{
+class AuthenticateUserUseCase {
   constructor(
     @inject("UsersRepository")
-    private usersRepository: IUserRepository
-  ){}
-  async execute({email, password}: IRequest): Promise<IResponse>{
-    //Usuario existe, precisa do usersrepository
-    const user = await this.usersRepository.findByEmail(email);
+    private userRepository: IUsersRepository
+  ) {}
 
-    if(!user){
-      throw new AppError ("Email or password incorrect!");
+  async execute({ email, password }: IRequest): Promise<IResponse> {
+    // Usuário existe?
+    const user = await this.userRepository.findByEmail(email);
+
+    if (!user) {
+      throw new AppError("Email/password incorrect.");
     }
-    
-    //Senha correta
+
+    // Senha está correta?
     const passwordMatch = await compare(password, user.password);
 
-    if(!passwordMatch){
-      throw new AppError("Email or password incorrect");
+    if (!passwordMatch) {
+      throw new AppError("Email/password incorrect.");
     }
 
-    //Gerar token no site md5 hash generator
-    const token = sign({}, "5030ac5a7d06ad257defb8b66a892d23", {
+    // Gerar JWT no site md5 generator
+    const token = sign({}, "f9ee3831ad2e4d738179fbbb8a66a9d7", {
       subject: user.id,
-      expiresIn: "1d"
+      expiresIn: "1d",
     });
 
-    return {
-      user, 
+    // Criando objeto de retorno
+    const tokenReturn: IResponse = {
+      user: {
+        name: user.name,
+        email: user.email,
+      },
       token,
     };
 
-
+    return tokenReturn;
   }
-
 }
 
 export { AuthenticateUserUseCase };

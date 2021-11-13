@@ -226,3 +226,6 @@ Para que o usuário consiga alterar ou inserir um avatar ele precisa estar auten
 
 
 
+## AVatar
+para adicionar um avatar preciso inserir o token.
+adicionei um token no arquivo de enviroments e agr é so digitar token no insomnia
